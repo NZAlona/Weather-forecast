@@ -46,7 +46,7 @@
 .item {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 295px;
-  height: 180px;
+  height: 195px;
   margin: 0 auto;
   list-style: none;
   margin-top: 15px;
@@ -62,4 +62,12 @@
 .text {
   padding-left: 10px;
   padding-bottom: 5px;
+}
+
+.wrapper {
+  width: 950px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
 }
