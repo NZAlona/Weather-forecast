@@ -17,7 +17,7 @@ function onFormSubmit(evt) {
 }
 
 function fetchWeather(town) {
-  const BASE_URL = 'http://api.weatherapi.com/v1';
+  const BASE_URL = 'https://api.weatherapi.com/v1';
   const API_KEY = '505b3a4f62df4484a68223506230512';
 
   return fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${town}`).then(response => {
