@@ -11,8 +11,8 @@ function onFormSubmit(evt) {
   const { field, days } = evt.currentTarget.elements;
   fetchWeather(field.value, days.value)
     .then(data => (refs.list.innerHTML = renderMarkup(data.forecast.forecastday)))
-    .catch(err => console.log(err))
-    .finally(() => refs.form.reset());
+    .catch(err => console.log(err));
+  // .finally(() => refs.form.reset());
 }
 
 function fetchWeather(town, day) {
