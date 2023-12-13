@@ -12,7 +12,6 @@ function onFormSubmit(evt) {
   fetchWeather(field.value, days.value)
     .then(data => (refs.list.innerHTML = renderMarkup(data.forecast.forecastday)))
     .catch(err => console.log(err));
-  // .finally(() => refs.form.reset());
 }
 
 function fetchWeather(town, day) {
@@ -20,6 +19,9 @@ function fetchWeather(town, day) {
   const API_KEY = '505b3a4f62df4484a68223506230512';
 
   return fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${town}&days=${day}`).then(response => {
+    if (!response.ok) {
+      throw new Error('Bad request');
+    }
     return response.json();
   });
 }
